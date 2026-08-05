@@ -1,0 +1,4 @@
+interface:
+  display_name: "Go/Python Daily Practice"
+  short_description: "Track progress and generate daily Go/Python drills"
+  default_prompt: "Use $daily-go-python-practice to create today’s Go and Python practice problems from my learning logs."

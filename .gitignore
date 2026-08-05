@@ -1,4 +1,4 @@
 /go/*
-!/go/.gitkeep
+!/go/README.template.md
 /python/*
-!/python/.gitkeep
+!/python/README.template.md

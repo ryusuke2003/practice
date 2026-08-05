@@ -1,2 +1,4 @@
-/go/
-/python/
+/go/*
+!/go/.gitkeep
+/python/*
+!/python/.gitkeep

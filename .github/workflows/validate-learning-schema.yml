@@ -1,0 +1,28 @@
+name: Validate learning schema
+
+on:
+  pull_request:
+    paths:
+      - ".agents/skills/daily-go-python-practice/**"
+      - "go/README.template.md"
+      - "python/README.template.md"
+      - ".github/workflows/validate-learning-schema.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - ".agents/skills/daily-go-python-practice/**"
+      - "go/README.template.md"
+      - "python/README.template.md"
+      - ".github/workflows/validate-learning-schema.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate learning schema
+        run: python .agents/skills/daily-go-python-practice/scripts/validate_learning_schema.py
